@@ -1,0 +1,68 @@
+@use"../../foudation/_mixin.scss" as *;
+
+.p-speaker{
+  background-image: var(--bg-gradient);
+  padding-bottom: px-to-rem(83px);
+  &__wrapper{
+    margin-top:rclamp(30,60,375,1366);
+    display: grid;
+    row-gap: rclamp(40,80,375,1366);
+  }
+  &__profile{
+    display: flex;
+    column-gap: rclamp(40,60,375,1366);
+    @include responsive(sm){
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+  .reserve{
+    flex-direction: row-reverse;
+    @include responsive(sm){
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+  &__desc{
+    flex: 1;
+    @include responsive(sm){
+      width: 100%;
+    }
+  }
+  &__name{
+    font-size: rclamp(32,42,375,1366);
+    font-weight: bold;
+    color: var(--main-color);
+    letter-spacing: .05em;
+  }
+  &__name-note{
+   margin-top: px-to-rem(10px);
+   display: block;
+   font-size:rclamp(14,18,375,1366);
+   color: var(--text-color);
+   letter-spacing: .05em;
+  }
+  &__text{
+  margin-top: rclamp(30,40,375,1366);
+  color: var(--text-color);
+  p{
+    line-height: 1.8;
+    letter-spacing: .05em;
+    @include responsive(sm){
+      font-size: px-to-rem(14px);
+    }
+  }
+  }
+ &__image{
+  flex: 0 1 40%;
+  @include responsive(sm){
+    width: 100%;
+    margin-bottom: px-to-rem(20px);
+  }
+ img{
+  @include responsive(sm){
+    width: 100%;
+  }
+ }
+ }
+}

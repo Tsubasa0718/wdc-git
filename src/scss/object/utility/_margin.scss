@@ -1,0 +1,13 @@
+@use"../../foudation/_mixin.scss" as *;
+.u-image-mg{
+ margin-bottom: px-to-rem(55px);
+ @include responsive(md){
+    margin: 0;
+ }
+}
+.u-list-mg{
+    margin-right:  px-to-rem(40px);
+    @include responsive(md){
+        margin: 0;
+     }
+}

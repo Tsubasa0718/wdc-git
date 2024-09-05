@@ -1,0 +1,11 @@
+@charset "UTF-8";
+@use "./foudation/_index.scss" as foudation;
+// fondation
+@use "./leyout/_index.scss" as leyout;
+// leyout
+@use "./object/project/_index.scss" as project;
+// project
+@use"./object/compornent/_btn.scss";
+// compornet
+@use "./object/utility/_index.scss" as utility;
+// utility

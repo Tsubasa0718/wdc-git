@@ -1,0 +1,21 @@
+@use "sass:math";
+@function rclamp($min, $max, $minViewport, $maxViewport) {
+  $vwScale: math.div($max - $min, $maxViewport - $minViewport);
+  $baseOffset: $min - $minViewport * $vwScale;
+
+  $minRem: math.div($min, 16);
+  $maxRem: math.div($max, 16);
+  $baseOffsetRem: math.div($baseOffset, 16);
+  $vwScaleRem: $vwScale * 100;
+
+  @return clamp(#{$minRem}rem, #{$baseOffsetRem}rem + #{$vwScaleRem}vw, #{$maxRem}rem);
+}
+
+// 基準となるフォントサイズを設定
+$base-size: 16px;
+
+// pxをremに変換する関数
+@function px-to-rem($px) {
+  @return math.div($px, $base-size) * 1rem;
+}
+// 

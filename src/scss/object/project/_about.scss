@@ -1,0 +1,79 @@
+@use"../../foudation/_mixin.scss" as *;
+
+.p-about{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    
+    &__wrapper{
+     margin-top: px-to-rem(60px);
+     padding-bottom: px-to-rem(114px);
+     display: flex;
+     align-items: center;
+     @include responsive(sm){
+      flex-direction: column;
+     }
+    }
+    &__image{
+        width: 40%;
+    @include responsive(sm){
+        width: 100%;
+    }
+    }
+    &__image{
+        flex: 1 1 auto;
+        img{
+            @include responsive(sm){
+             width: 100%;
+             height: 200px;
+             object-fit: cover;
+             object-position: center 38%;
+            }
+        }
+    }
+    &__desc{
+        width: 60%;
+        margin-left: px-to-rem(69px);
+        @include responsive(sm){
+         margin: px-to-rem(20px) 0 0 0;
+         width: 100%;
+        }
+    }
+    &__subtitle{
+        margin-bottom: rclamp(16,20,375,1366);
+        font-size: rclamp(18,24,375,1366);
+        font-weight: bold;
+        line-height: 1.15;
+    }
+    &__title{
+        margin-bottom: rclamp(25,40,375,1366);
+        font-size: rclamp(40,48,375,1366);
+        font-weight: bold;
+        color: var(--main-color);
+        line-height: 1.15;
+    }
+    &__info{
+      margin-bottom: rclamp(15,25,375,1366);
+      font-size: rclamp(16,18,375,1366);
+      line-height: 2;
+      letter-spacing: .05em;
+      font-weight: 500;
+      @include responsive(sm){
+        line-height: 1.6;
+      }
+    }
+    .table-type01{
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        th,
+        td{
+         text-align: left;
+         padding: px-to-rem(5px);
+         letter-spacing: .05em;
+         line-height: 1.15;
+        }
+     }
+    &__btn{
+        margin-top: px-to-rem(25px);
+    }
+}

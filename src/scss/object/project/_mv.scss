@@ -1,0 +1,80 @@
+@use"../../foudation/_mixin.scss" as *;
+
+.p-mv{
+  background-image: var( --bg-gradient);
+  &__inner{
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 1240px;
+    height: rclamp(450,700,375,1366);
+    margin: 0 auto;
+    padding: 0 rclamp(30,50,375,1366);
+    background: url(/images/mv-image.png) no-repeat right bottom / 560px 690px;
+    @include responsive(sm){
+    background-position: right -80px bottom;
+    background-size: contain;
+    }
+  }
+  &__titleArea{
+    position: relative;
+    color: var(--text-color);
+    &::after{
+      display: block;
+      content: "";
+      position: absolute;
+      right: 40px;
+      bottom: 60px;
+      width: 326px;
+      height: 68px;
+      background: url(/images/teiji-de-kaerumon.png) no-repeat center/contain;
+     @include responsive(md){
+      bottom: 70px;
+     }
+     @include responsive(sm){
+      right: -40%;
+      bottom: 90px;
+      width: 150px;
+      height: 40px;
+     }
+    }
+  }
+  &__subtitle{
+    font-size: rclamp(16,24,375,1366);
+    font-weight: bold;
+    color: var(--main-color);
+    letter-spacing: .05em;
+  }
+  &__title{
+    padding: px-to-rem(19px) 0 px-to-rem(10px) 0;
+    font-size: rclamp(24,100,375,1366);
+   font-weight: bold;
+   letter-spacing: .016em;
+  }
+  &__date{
+   font-size: rclamp(18,36,375,1366);
+   font-weight: bold;
+   letter-spacing: .05em;
+  }
+  &__btn{
+    margin-top: px-to-rem(32px);
+  }
+  &__speaker-name{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: rclamp(12,21,375,1366);
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+  }
+  &__speaker-name-small{
+    font-size: 0.8em;
+  }
+  &__speaker-name-label{
+   font-size: rclamp(10,14,375,1366);
+   letter-spacing: .05em;
+  }
+}
+ 
+ 

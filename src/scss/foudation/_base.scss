@@ -1,0 +1,77 @@
+@use "./_mixin.scss" as *;
+
+html{
+   scroll-behavior: smooth;
+}
+
+body {
+    font-size: 100%;
+    font-family:"Montserrat", "Noto Sans JP", "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    sans-serif;
+}
+
+:root{
+ --main-color: #D136D1;
+ --text-color: #fff;
+ --bg-color: #141414;
+ --bg-gradient: linear-gradient(
+    135deg, 
+    #0E002E 0%, 
+    #1E092B 23%, 
+    #320C65 49%, 
+    #A01B7C 80%, 
+    #C21780 100%);
+ }
+
+ a {
+    text-decoration: none;
+ }
+
+ ul {
+    list-style: none;
+ }
+
+ img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+ }
+
+ .container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 1.875rem;
+ }
+ 
+ .sp-only{
+   display: none;
+   @include responsive(md){
+      display: block;
+   }
+ }
+
+ .section-title,
+ .section-subtitle{
+   text-align: center;
+ }
+ .section-title{
+  padding-top: rclamp(50,110,375,1366);
+  font-size: rclamp(32,60,375,1366);
+  font-weight: bold;
+  color: var(--main-color);
+  letter-spacing: .05em;
+ }
+ .section-subtitle{
+  display: block;
+  font-size: rclamp(14,20,375,1366);
+  letter-spacing: .05em;
+  color: var(--text-color);
+ }
+ 
+
+
+
+ 

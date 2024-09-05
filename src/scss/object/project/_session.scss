@@ -1,0 +1,53 @@
+@use"../../foudation/_mixin.scss" as *;
+.p-session{
+ background-color: var(--bg-color);
+ color: var(--text-color);
+&__table{
+   margin-top: rclamp(20,100,375,1366);
+   padding-bottom: rclamp(50,110,375,1366);
+    .table-type02{
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        tr{
+           border-bottom: 1px solid var(--main-color);
+        }
+         th,
+         td{
+         padding: px-to-rem(40px) px-to-rem(30px);
+         @include responsive(sm){
+            padding: px-to-rem(20px) 0;
+         }
+        }   
+        th{
+         font-size: rclamp(16,22,375,1366);
+         font-weight: bold;
+         letter-spacing: .05em;
+         line-height: 1.15;
+         width: 200px;
+         @include responsive(sm){
+            width: 80px;
+         }
+       }
+      &__title{
+         margin-bottom: rclamp(10,15,375,1366);
+         font-size: px-to-rem(22px);
+         font-weight: bold;
+         letter-spacing: .05em;
+         line-height: 1.15;
+         color: var(--main-color);
+       @include responsive(sm){
+         font-size: px-to-rem(18px);
+       }
+      }
+      &__text{
+         font-size: px-to-rem(15px);
+         letter-spacing: .05em;
+         line-height: 1.15;
+         @include responsive(sm){
+            font-size: px-to-rem(14px);
+         }
+      }
+      }
+ }
+}

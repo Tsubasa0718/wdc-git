@@ -1,0 +1,87 @@
+@use"../../foudation/_mixin.scss" as *;
+.p-form-body{
+  margin-top: px-to-rem(60px);
+  color: var(--text-color);
+  padding: px-to-rem(90px) px-to-rem(90px) px-to-rem(80px) px-to-rem(90px);
+  border: solid 5px var(--main-color);
+  border-radius: 20px;
+  background-color:  #1a1a1a;
+  @include responsive(sm){
+    padding: 8%;
+  }
+}
+
+.p-form{
+    &__item:not(:first-of-type){
+        margin-top: px-to-rem(30px);
+        display: flex;
+        flex-direction: column;
+    }
+    &__chektitle,
+    &__title{
+        font-size: 1rem;
+        font-weight: bold;
+        letter-spacing: .05em;
+        line-height: 1.15;
+        margin-bottom: px-to-rem(10px);
+    }
+    &__require{
+        color: var(--main-color);
+        font-size: px-to-rem(11.2px);
+        letter-spacing: .05em;
+        line-height: 1.15;
+        margin-left: px-to-rem(9px);
+    }
+    &__note{
+        font-size: px-to-rem(12px);
+        line-height: 1.15;
+        letter-spacing: .05em;
+    }
+    &__radio{
+        @include responsive(sm){
+            display: block;
+        }
+    }
+    &__radio:not(:first-of-type){
+        margin-left: px-to-rem(35px);
+        @include responsive(sm){
+         margin-top: 5px;
+         margin-left: 0;
+        }
+    }
+    
+    &__input,
+    &__select{
+    width: 300px;
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    color: #333;
+    @include responsive(sm){
+        width: 100%;
+    }
+    }
+    input[type="tel"]{
+        width: 200px;
+        @include responsive(sm){
+            width: 100%;
+        }
+    }
+    &__textarea{
+        width: 600px;
+        min-height: 200px;
+        background-color: #fff;
+        padding: 8px;
+        border-radius: 5px;
+        color: #333;
+        @include responsive(sm){
+            width: 100%;
+            min-width: 100%;
+        }
+    }
+
+    &__btn{
+        text-align: center;
+        margin-top: px-to-rem(50px);
+    }
+}

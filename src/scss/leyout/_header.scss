@@ -1,0 +1,33 @@
+@use"../foudation/_mixin.scss" as *;
+.l-header{
+    position: fixed;
+    z-index: 2;
+    padding: rclamp(20,30,375,1366);
+    width: 100%;
+    height: rclamp(60,90,375,1366);
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo{
+    font-size: px-to-rem(28px);
+    font-weight: bold;
+    letter-spacing: .05em;
+    color: var(--main-color);
+  }
+  .nav{
+    &__list{
+        display: flex;
+    }
+    &__item:not(:first-of-type){
+        margin-left: rclamp(15,30,375,1366);
+    }
+    &__link{
+      font-size: rclamp(12,16,375,1366);
+      letter-spacing: .05em;
+      font-weight: bold;
+      color: var(--text-color);
+    }
+  }
+}
